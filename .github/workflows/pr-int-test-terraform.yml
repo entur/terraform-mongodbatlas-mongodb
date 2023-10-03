@@ -3,7 +3,7 @@ name: Terraform Integration Tests
 on:
   pull_request:
     paths:
-      - 'modules/bucket/**'
+      - 'modules/mongodb_cluster/**'
       - 'test/**'
     branches:
       - master
@@ -14,12 +14,12 @@ on:
   workflow_dispatch:
 
 jobs:
-  terratest_bucket:
+  terratest_mongodb_cluster:
     permissions:
       contents: 'read'
       id-token: 'write'
 
-    name: Integration test Bucket module
+    name: Integration test mongodb_cluster module
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
