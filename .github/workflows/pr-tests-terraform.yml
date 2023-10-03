@@ -14,4 +14,3 @@ jobs:
     uses: entur/gh-workflows/.github/workflows/pr-tests-terraform.yml@main
     with:
       module_dirs: '["./modules/mongodb_cluster"]'
-      tf_version: 0.13.2
