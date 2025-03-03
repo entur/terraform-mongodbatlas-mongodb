@@ -104,7 +104,7 @@ variable "database_user_auth_database_name" {
 }
 
 variable "database_user_roles" {
-  type = map
+  type = map(any)
   default = {
     readWriteAnyDatabase = {
       role_name     = "readWriteAnyDatabase"
@@ -114,7 +114,7 @@ variable "database_user_roles" {
 }
 
 variable "database_user_scopes" {
-  type = map
+  type = map(any)
   default = {
     cluster = {
       type = "CLUSTER"
@@ -123,6 +123,6 @@ variable "database_user_scopes" {
 }
 
 variable "labels" {
-  type    = map
+  type    = map(any)
   default = {}
 }
